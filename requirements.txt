@@ -1,0 +1,5 @@
+dash>=2.11,<4
+gunicorn>=21,<24
+openpyxl>=3.1,<4
+pandas>=2.0,<3
+plotly>=5.0
