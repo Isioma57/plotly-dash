@@ -155,8 +155,19 @@ def prepare_data(workbook_path):
     return cleaned
 
 
-df_clean = prepare_data(DATA_PATH)
+if not DATA_PATH.exists():
+    raise FileNotFoundError(
+        f"Clean dataset was not found: {DATA_PATH}"
+    )
 
+df_clean = pd.read_csv(
+    DATA_PATH,
+    parse_dates=[
+        "order_date",
+        "ship_date",
+        "month_start"
+    ]
+)
 
 def safe_divide(numerator, denominator):
     return numerator / denominator if denominator else 0
