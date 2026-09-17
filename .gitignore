@@ -1,2 +1,5 @@
 .vscode/
 notebook - Shortcut.lnk
+.venv/
+__pycache__/
+.ipynb_checkpoints/
